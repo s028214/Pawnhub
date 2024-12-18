@@ -80,7 +80,7 @@ struct ProfileView: View {
                     .frame(height: 165)
                     .cornerRadius(25)
                     
-                    HStack{
+                    HStack{ // username
                         if ((data.response.title?.isEmpty) != nil) {
                             Text(data.response.title ?? "")
                                 .padding(.all, 2)
@@ -105,9 +105,20 @@ struct ProfileView: View {
                         }
                     }
                     .font(.caption)
-        
-                    Text("👤 \(data.response.followers ?? 0)")
-                        .padding(.all, 2)
+                    .padding(.bottom, 2)
+                    
+                    VStack {
+                        Text("Followers: \(data.response.followers ?? 0)")
+                            .padding(.bottom, 2)
+                        
+                        if ((data.response.league?.isEmpty) != nil) {
+                            Text("🏆 \(data.response.league ?? "")")
+                               
+                        }
+    
+                    }
+                    .font(.caption)
+                   
                 })
             }) .foregroundColor(Color.white)
                 .padding(.all)

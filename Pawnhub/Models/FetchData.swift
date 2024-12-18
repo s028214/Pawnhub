@@ -11,7 +11,7 @@ struct FetchData{
     var response: Response = Response()
     
     mutating func getData() async{
-        let URLString = "https://api.chess.com/pub/player/magnuscarlsen"
+        let URLString = "https://api.chess.com/pub/player/hyper-n0va"
         
         guard let url = URL(string: URLString) else {return}
         
@@ -31,7 +31,5 @@ struct Response: Codable {
     var title: String? // ✅
     var followers: Int?
     var location: String? // ✅
-    // verified discontinued?
     var league: String?
-    // streaming_platforms
 }
