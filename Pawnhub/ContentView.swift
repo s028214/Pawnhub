@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var data: FetchData = FetchData()
+    @State var viewState: ViewState = .profileView
+    @State var accountURL: String = "https://api.chess.com/pub/player/magnuscarlsen"
+    
     
     var body: some View {
         /*   VStack {
@@ -16,12 +18,7 @@ struct ContentView: View {
          .foregroundStyle(.tint)
          
          } */
-        VStack{
-            Text(data.response.name ?? "N/A")
-            
-        }.task {
-            await data.getData()
-        }
+        Text("CONTENT VIEW")
     }
 }
 

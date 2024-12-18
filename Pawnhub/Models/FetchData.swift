@@ -24,5 +24,14 @@ struct FetchData{
 }
 
 struct Response: Codable {
-    var name: String? 
+    var avatar: URL? // ✅
+    var url: URL?
+    var name: String? // ✅
+    var username: String? // ✅
+    var title: String? // ✅
+    var followers: Int?
+    var location: String? // ✅
+    // verified discontinued?
+    var league: String?
+    // streaming_platforms
 }
