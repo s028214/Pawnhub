@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var data: FetchData = FetchData()
+    
     var body: some View {
-        VStack {
-            Image(.aaa).resizable().aspectRatio(contentMode:.fit)
-                .foregroundStyle(.tint)
+        /*   VStack {
+         Image(.aaa).resizable().aspectRatio(contentMode:.fit)
+         .foregroundStyle(.tint)
+         
+         } */
+        VStack{
+            Text(data.response.name ?? "N/A")
             
         }
-        .padding()
     }
 }
 
