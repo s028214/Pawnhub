@@ -19,6 +19,8 @@ struct ContentView: View {
         VStack{
             Text(data.response.name ?? "N/A")
             
+        }.task {
+            await data.getData()
         }
     }
 }
