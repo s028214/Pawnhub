@@ -14,6 +14,8 @@
 		DF546BCE2D134409006B2B34 /* FetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF546BCD2D134409006B2B34 /* FetchData.swift */; };
 		DF546BD22D134540006B2B34 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF546BD12D134540006B2B34 /* WebView.swift */; };
 		DF546BD42D1345C7006B2B34 /* WebViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF546BD32D1345C7006B2B34 /* WebViewContainer.swift */; };
+		DF546BD62D1348EB006B2B34 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF546BD52D1348EB006B2B34 /* ProfileView.swift */; };
+		DF546BD82D134904006B2B34 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF546BD72D134904006B2B34 /* ViewState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		DF546BCD2D134409006B2B34 /* FetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchData.swift; sourceTree = "<group>"; };
 		DF546BD12D134540006B2B34 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		DF546BD32D1345C7006B2B34 /* WebViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewContainer.swift; sourceTree = "<group>"; };
+		DF546BD52D1348EB006B2B34 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		DF546BD72D134904006B2B34 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,11 +63,10 @@
 			children = (
 				DF546BBF2D133DF9006B2B34 /* PawnhubApp.swift */,
 				DF546BC12D133DF9006B2B34 /* ContentView.swift */,
+				DF546BDA2D134996006B2B34 /* Views */,
+				DF546BD92D13497F006B2B34 /* Models */,
 				DF546BC32D133DFB006B2B34 /* Assets.xcassets */,
 				DF546BC52D133DFB006B2B34 /* Preview Content */,
-				DF546BCD2D134409006B2B34 /* FetchData.swift */,
-				DF546BD12D134540006B2B34 /* WebView.swift */,
-				DF546BD32D1345C7006B2B34 /* WebViewContainer.swift */,
 			);
 			path = Pawnhub;
 			sourceTree = "<group>";
@@ -74,6 +77,25 @@
 				DF546BC62D133DFB006B2B34 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DF546BD92D13497F006B2B34 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DF546BCD2D134409006B2B34 /* FetchData.swift */,
+				DF546BD72D134904006B2B34 /* ViewState.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DF546BDA2D134996006B2B34 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DF546BD12D134540006B2B34 /* WebView.swift */,
+				DF546BD32D1345C7006B2B34 /* WebViewContainer.swift */,
+				DF546BD52D1348EB006B2B34 /* ProfileView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,9 +169,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF546BC22D133DF9006B2B34 /* ContentView.swift in Sources */,
+				DF546BD82D134904006B2B34 /* ViewState.swift in Sources */,
 				DF546BD42D1345C7006B2B34 /* WebViewContainer.swift in Sources */,
 				DF546BD22D134540006B2B34 /* WebView.swift in Sources */,
 				DF546BCE2D134409006B2B34 /* FetchData.swift in Sources */,
+				DF546BD62D1348EB006B2B34 /* ProfileView.swift in Sources */,
 				DF546BC02D133DF9006B2B34 /* PawnhubApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
