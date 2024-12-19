@@ -2,7 +2,8 @@
 //  PawnhubApp.swift
 //  Pawnhub
 //
-//  Created by Mason Z. on 12/18/24.
+//  Created by Mason Z & Minh D 12/18/24.
+
 //
 
 import SwiftUI

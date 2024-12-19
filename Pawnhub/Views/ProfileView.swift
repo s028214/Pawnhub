@@ -2,21 +2,17 @@
 //  ProfileView.swift
 //  Pawnhub
 //
-//  Created by Mason Z. 12/18/24.
+//  Created by Mason Z & Minh D 12/18/24.
 //
 
 import SwiftUI
 
 struct ProfileView: View {
-    @State var data: FetchData = FetchData()
-    
-    // input variables
-    @State var user: String = "hyper-n0va"
-    @State private var inputText: String = ""
-    
-    // state variables
-    @Binding var accountURL: String
-    @Binding var viewState: ViewState
+    @AppStorage("username") private var user: String = "hyper-n0va"
+       @State private var data: FetchData = FetchData()
+       @State private var inputText: String = ""
+       @Binding var accountURL: String
+       @Binding var viewState: ViewState
     
     var body: some View {
         ZStack{

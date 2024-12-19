@@ -2,7 +2,8 @@
 //  FetchData.swift
 //  NewsAPI
 //
-//  Created by Mason Z. on 12/12/24.
+//  Created by Mason Z & Minh D 12/18/24.
+
 //
 
 import Foundation
