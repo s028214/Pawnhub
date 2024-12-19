@@ -10,22 +10,29 @@ import Foundation
 struct FetchData{
     var response: Response = Response()
     
-    mutating func getData() async{
-        let URLString = "https://api.chess.com/pub/player/hyper-n0va"
+    mutating func getData(from URLString: String) async -> FetchData{
+       //  let URLString = "https://api.chess.com/pub/player/hyper-n0va"
         
-        guard let url = URL(string: URLString) else {return}
+        guard let url = URL(string: URLString) else { return self }
         
-        let(data, _) = try! await URLSession.shared.data(from: url)
-        response = try! JSONDecoder().decode(Response.self, from: data) // decoded JSON
-        
-        let dataString = String(data: data, encoding: .utf8)
-        print(dataString ?? " ")
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            var newResponse = try JSONDecoder().decode(Response.self, from: data)
+            newResponse = try! JSONDecoder().decode(Response.self, from: data)
+            let dataString = String(data: data, encoding: .utf8)
+            print(dataString ?? " ")
+
+            return FetchData(response: newResponse)
+        } catch {
+            print("Error: \(error)")
+            return self
+        }
     }
 }
 
 struct Response: Codable {
     var avatar: URL? // ✅
-    var url: URL?
+    var url: String?
     var name: String? // ✅
     var username: String? // ✅
     var title: String? // ✅
