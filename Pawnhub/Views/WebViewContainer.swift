@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// how to implement a page loading screen? like if page is not loaded yet. 
 struct WebViewContainer: View {
     @Binding var accountURL: String
     @Binding var viewState: ViewState
@@ -29,5 +30,5 @@ struct WebViewContainer: View {
 }
 
 #Preview {
-    WebViewContainer(accountURL: .constant("www.google.com"), viewState: .constant(.profileView))
+    WebViewContainer(accountURL: .constant("https://www.chess.com/"), viewState: .constant(.profileView))
 }

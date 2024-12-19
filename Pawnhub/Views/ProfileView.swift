@@ -55,21 +55,27 @@ struct ProfileView: View {
                             phase in
                             switch phase {
                             case .empty:
-                                Image("blank")
-                                    .resizable()
-                                    .aspectRatio(contentMode:.fit)
+                                if ((data.response.username?.isEmpty) != nil)  {
+                                    Image("blank") // if user exists, but does not have pfp
+                                        .resizable()
+                                        .aspectRatio(contentMode:.fit)
+                                } else {
+                                    Image("fnf") // if user does not exist
+                                        .resizable()
+                                        .aspectRatio(contentMode:.fit)
+                                }
                                 
-                            case.failure:
+                            case.failure: // if failure
                                 Image("fnf")
                                     .resizable()
                                     .aspectRatio(contentMode:.fit)
                              
-                            case .success(let image):
+                            case .success(let image): // if user exists + have pfp
                                 image
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                 
-                            default:
+                            default: // loading - in case of slow API call
                                 ProgressView()
                             }
                         }
@@ -156,5 +162,5 @@ struct ProfileView: View {
 }
         
 #Preview {
-    ProfileView(accountURL: .constant("www.google.com"), viewState: .constant(.profileView))
+    ProfileView(accountURL: .constant("https://www.chess.com/"), viewState: .constant(.profileView))
 }
