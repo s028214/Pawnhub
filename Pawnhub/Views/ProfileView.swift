@@ -8,17 +8,21 @@
 import SwiftUI
 
 struct ProfileView: View {
+    
+    @State private var data: FetchData = FetchData()
+    
+    // input variables
+    @State private var inputText: String = ""
     @AppStorage("username") private var user: String = "hyper-n0va"
-       @State private var data: FetchData = FetchData()
-       @State private var inputText: String = ""
-       @Binding var accountURL: String
-       @Binding var viewState: ViewState
+    // state variables
+    @Binding var accountURL: String
+    @Binding var viewState: ViewState
     
     var body: some View {
         ZStack{
             // background
             Rectangle()
-                .foregroundColor(Color.black.opacity(0.90))
+                .foregroundColor(Color.backgroundGray)
                 .edgesIgnoringSafeArea(.all)
             
             // textfield
@@ -29,7 +33,6 @@ struct ProfileView: View {
                     .fill(Color.black)
                     .frame(width: 195, height: 40)
                     */
-                                    
                     // The TextField itself
                     TextField("Username", text: $inputText, onCommit: {
                         user = inputText
