@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Constants{
     // no need for text constants, text uses default apple .title and .caption
+    static let captionFont: Font = .caption
 
 }
 

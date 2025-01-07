@@ -110,7 +110,7 @@ struct ProfileView: View {
                                     Text(data.response.location ?? "[N/A]")
                                 }
                             }
-                            .font(.caption)
+                            .font(Constants.captionFont)
                             .padding(.bottom, 2)
                             
                             // followers, league
@@ -122,7 +122,7 @@ struct ProfileView: View {
                                     Text("🏆 \(data.response.league ?? "")")
                                 }
                             }
-                            .font(.caption)
+                            .font(Constants.captionFont)
                         }
                         
                         // if profile doesn't exist
@@ -136,8 +136,8 @@ struct ProfileView: View {
                                 Text("The requested user '\(user.lowercased())' does not exist.")
                                 
                                 Text("Please double check your query.")
-                            }.font(.caption)
-                           
+                            }
+                            .font(Constants.captionFont)
                         }
                     })
                 }) 
