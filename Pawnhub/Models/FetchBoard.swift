@@ -8,22 +8,21 @@
 
 import Foundation
 
-struct FetchData{
-    var response: Response = Response()
+struct FetchBoard{
+    var response: Reply = Reply()
     
-    mutating func getData(from URLString: String) async -> FetchData{
-       //  let URLString = "https://api.chess.com/pub/player/hyper-n0va"
-        
+    mutating func getData() async -> FetchBoard{
+        let URLString = "https://api.chess.com/pub/leaderboards"
         guard let url = URL(string: URLString) else { return self }
         
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
-            var newResponse = try JSONDecoder().decode(Response.self, from: data)
-            newResponse = try! JSONDecoder().decode(Response.self, from: data)
+            var newReply = try JSONDecoder().decode(Reply.self, from: data)
+            newReply = try! JSONDecoder().decode(Reply.self, from: data)
             let dataString = String(data: data, encoding: .utf8)
             print(dataString ?? " ")
 
-            return FetchData(response: newResponse)
+            return FetchBoard(response: newReply)
         } catch {
             print("Error: \(error)")
             return self
@@ -31,8 +30,11 @@ struct FetchData{
     }
 }
 
+struct Reply: Codable {
+    var daily: [Profile] = []
+}
 
-struct Response: Codable {
+struct Profile: Codable {
     var avatar: URL? // ✅
     var url: String?
     var name: String? // ✅
@@ -41,4 +43,8 @@ struct Response: Codable {
     var followers: Int?
     var location: String? // ✅
     var league: String?
+}
+
+extension Profile: Identifiable {
+    var id: String {username ?? ""}
 }
