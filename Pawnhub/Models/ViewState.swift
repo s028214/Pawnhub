@@ -7,5 +7,5 @@
 import Foundation
 
 enum ViewState{
-    case profileView, webView
+    case profileView, webView, LeaderboardView, profileWebView
 }

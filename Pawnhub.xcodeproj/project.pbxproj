@@ -19,6 +19,7 @@
 		DF8D31CA2D28565500DDA5AD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8D31C92D28565500DDA5AD /* Constants.swift */; };
 		DFED162C2D31A11C001D03F5 /* FetchBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFED162B2D31A11C001D03F5 /* FetchBoard.swift */; };
 		DFED162E2D31A38D001D03F5 /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFED162D2D31A38D001D03F5 /* LeaderboardView.swift */; };
+		DFED16302D32EE4E001D03F5 /* ProfileWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFED162F2D32EE4E001D03F5 /* ProfileWebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		DF8D31C92D28565500DDA5AD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DFED162B2D31A11C001D03F5 /* FetchBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchBoard.swift; sourceTree = "<group>"; };
 		DFED162D2D31A38D001D03F5 /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
+		DFED162F2D32EE4E001D03F5 /* ProfileWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileWebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 			children = (
 				DF546BBF2D133DF9006B2B34 /* PawnhubApp.swift */,
 				DF546BC12D133DF9006B2B34 /* ContentView.swift */,
+				DFED162F2D32EE4E001D03F5 /* ProfileWebView.swift */,
 				DF546BDA2D134996006B2B34 /* Views */,
 				DF546BD92D13497F006B2B34 /* Models */,
 				DF546BC32D133DFB006B2B34 /* Assets.xcassets */,
@@ -178,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFED162E2D31A38D001D03F5 /* LeaderboardView.swift in Sources */,
+				DFED16302D32EE4E001D03F5 /* ProfileWebView.swift in Sources */,
 				DF546BC22D133DF9006B2B34 /* ContentView.swift in Sources */,
 				DFED162C2D31A11C001D03F5 /* FetchBoard.swift in Sources */,
 				DF546BD82D134904006B2B34 /* ViewState.swift in Sources */,

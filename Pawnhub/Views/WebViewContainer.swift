@@ -26,7 +26,7 @@ struct WebViewContainer: View {
                 }
             })
             SwiftUIWebView(urlString: accountURL)
-        }
+        } .edgesIgnoringSafeArea(.bottom)
     }
 }
 

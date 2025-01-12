@@ -1,14 +1,13 @@
 //
-//  FetchData.swift
+//  FetchBoard.swift
 //  NewsAPI
 //
-//  Created by Mason Z & Minh D 12/18/24.
-
+//  Created by Mason Z 1/10/24
 //
 
 import Foundation
 
-struct FetchBoard{
+struct FetchBoard{ // differs from FetchData() calls upon Reply (Response -> Profile)
     var response: Reply = Reply()
     
     mutating func getData() async -> FetchBoard{
