@@ -17,7 +17,7 @@ struct LeaderboardView: View {
             .foregroundColor(Color.backgroundGray)
             .edgesIgnoringSafeArea(.all)
         VStack {
-            Text("Chess Leaderboard")
+            Text("Daily Leaderboard")
                 .font(.largeTitle)
                 .bold()
                 .foregroundColor(.white)
