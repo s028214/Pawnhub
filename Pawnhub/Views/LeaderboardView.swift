@@ -26,6 +26,22 @@ struct LeaderboardView: View {
                 ForEach(data.response.daily) { a in
                     VStack (alignment: .leading, content: {
                         HStack{
+                            /*if a.rank == 1 {
+                             ZStack {
+                                 Image(systemName: "crown.fill")
+                                     .resizable()
+                                     .scaledToFit()
+                                     .frame(width: 40, height: 40)
+                                     .foregroundColor(.yellow)
+
+                                 Text("\(a.rank)")
+                                     .font(.caption)
+                                     .bold()
+                                     .foregroundColor(.white)
+                             }
+                             .frame(width: 40, height: 40)
+                         }*/
+                            
                             // Profile
                             AsyncImage(url: a.avatar){
                                 phase in
@@ -55,16 +71,51 @@ struct LeaderboardView: View {
                                     ProgressView()
                                 }
                             }
-                            .frame(height: 60)
+                            .frame(width: 60, height: 60)
                             .cornerRadius(5)
                             .padding(.all)
                             
                             
-                            //  username
-                            Text(a.username ?? "ERROR 404")
-                                .font(.title)
-                                .padding(.all, 2)
-                            
+                            //  username, elo, ranking
+                            VStack (alignment: .leading, content: {
+                                // ranking conditions
+                                VStack {
+                                    if a.rank == 1 {
+                                        Image(systemName: "crown.fill")
+                                            .resizable()
+                                            .foregroundColor(.yellow)
+                                    }
+                                    
+                                    else if a.rank == 2 {
+                                        Image(systemName: "crown.fill")
+                                            .resizable()
+                                            .foregroundColor(.gray)
+                                    }
+                                    
+                                    else if a.rank == 3 {
+                                        Image(systemName: "crown.fill")
+                                            .resizable()
+                                            .foregroundColor(.brown)
+                                    }
+                                    
+                                    else { 
+                                        Text("\(a.rank)")
+                                            .padding(.bottom, -6)
+                                    }
+                                    
+                                }
+                                .scaledToFit()
+                                .frame(width: 22, height: 22)
+                                .padding(.bottom, -8)
+                                
+                                
+                                
+                                Text(a.username ?? "ERROR 404")
+                                    .font(.title)
+                                    .padding(.horizontal, 2)
+                                Text("(\(a.score))")
+                                    .padding(.bottom, 10)
+                            })
                             Spacer()
                             
                             // title

@@ -39,8 +39,6 @@ struct ContentView: View {
                 .edgesIgnoringSafeArea(.all)
             
             
-
-            
             VStack {
                 
                 // profile view (change color)

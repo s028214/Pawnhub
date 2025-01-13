@@ -35,13 +35,10 @@ struct Reply: Codable {
 
 struct Profile: Codable {
     var avatar: URL? // ✅
-    var url: String?
-    var name: String? // ✅
+    var score: Int  // ✅
+    var rank: Int // ✅
     var username: String? // ✅
     var title: String? // ✅
-    var followers: Int?
-    var location: String? // ✅
-    var league: String?
 }
 
 extension Profile: Identifiable {
